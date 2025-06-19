@@ -26,17 +26,27 @@
 <!-- ADD THIS SCRIPT before </body> -->
 <script>
   document.getElementById("registerForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Stop page reload
+    e.preventDefault();
+
     const fbName = document.getElementById("facebookName").value.trim();
-    if (fbName) {
-      localStorage.setItem("facebookName", fbName); // Save the name
-      window.location.href = "teams.html"; // Go to teams.html
-    } else {
+    if (!fbName) {
       alert("Please enter your Facebook Name.");
+      return;
     }
+
+    // Get the current list from localStorage or create a new one
+    let teamList = JSON.parse(localStorage.getItem("facebookTeams")) || [];
+
+    // Add the new name
+    teamList.push(fbName);
+
+    // Save back to localStorage
+    localStorage.setItem("facebookTeams", JSON.stringify(teamList));
+
+    // Redirect to teams.html
+    window.location.href = "teams.html";
   });
 </script>
-
 
 </body>
 </html>
