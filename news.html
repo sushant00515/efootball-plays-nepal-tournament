@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eFootball Esports League</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">eFootball League</h1>
+      <button onclick="toggleMenu()" class="md:hidden text-blue-600">☰</button>
+      <nav id="mobile-menu" class="hidden md:flex w-full md:w-auto mt-4 md:mt-0 space-y-2 md:space-y-0 md:space-x-6 flex-col md:flex-row items-start md:items-center">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="teams.html" class="hover:text-blue-600">Teams</a>
+        <a href="schedule.html" class="hover:text-blue-600">Schedule</a>
+        <a href="leaderboard.html" class="hover:text-blue-600">Leaderboard</a>
+        <a href="register.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="bg-blue-600 text-white py-12 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold">News & Updates</h2>
+    <p class="mt-2 text-blue-200 max-w-xl mx-auto">Stay up to date with the latest tournament announcements and league news.</p>
+  </section>
+
+  <!-- Content Container -->
+  <main class="container mx-auto px-4 py-12 max-w-5xl">
+
+    <!-- Upcoming Tournaments Highlight -->
+    <section class="bg-yellow-50 border-l-8 border-yellow-400 rounded-lg p-6 mb-12 shadow-md">
+      <h3 class="text-2xl font-semibold mb-4 text-yellow-800">Upcoming Tournaments</h3>
+      <p class="mb-4 text-yellow-700">Get ready to compete in our upcoming tournaments. Register early and secure your spot!</p>
+      <ul class="list-disc list-inside space-y-2 text-yellow-800 font-semibold">
+        <li><strong>Summer eFootball Championship 2025</strong> — Starts June 21, 2025</li>
+   
+      </ul>
+      <a href="register.html" class="inline-block mt-6 px-5 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded shadow transition">Register Now</a>
+    </section>
+
+    <!-- News Items -->
+    <section class="space-y-10">
+      <article class="bg-white p-6 rounded-lg shadow-md">
+        <h4 class="text-xl font-bold mb-2 text-blue-600">Registeration date</h4>
+        <p class="text-sm text-gray-500 mb-3">June 22 - 25, 2025</p>
+        <p>Players have only 3 days time to register and secure their place on leauge of Summer eFootball Championship 2025.</p>
+      </article>
+
+      <article class="bg-white p-6 rounded-lg shadow-md">
+        <h4 class="text-xl font-bold mb-2 text-blue-600">League Schedule Released</h4>
+        <p class="text-sm text-gray-500 mb-3">Poste on June 26, 2025</p>
+        <p>The full league schedule available on June 26. Matches will held from june 27..</p>
+      </article>
+
+      <article class="bg-white p-6 rounded-lg shadow-md">
+        <h4 class="text-xl font-bold mb-2 text-blue-600">Slot (20)</h4>
+        <p class="text-sm text-gray-500 mb-3">Register early and secure your spot!</p>
+        <p>If you don't know how to register check on youtube (efootball plays nepal) link in below too.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-16 py-6">
+    <div class="container mx-auto text-center text-sm text-gray-600">
+      &copy; 2025 eFootball Esports League. All rights reserved.
+      <div class="mt-3 space-x-4">
+        <a href="https://www.facebook.com/profile.php?id=61562317022706&mibextid=wwXIfr&rdid=RfTXmX2TeuU7QliN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BsBniZCxQ%2F%3Fmibextid%3DwwXIfr#" class="text-blue-600 hover:underline">Facebook</a>
+        <a href="https://www.instagram.com/crazzy.aep/" class="text-blue-600 hover:underline">Twitter</a>
+        <a href="https://www.youtube.com/@CrazzyAep" class="text-blue-600 hover:underline">Youtube</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
