@@ -10,13 +10,24 @@
 <body class="bg-gray-100">
   <div class="container mx-auto py-12">
     <h2 class="text-3xl font-bold text-center mb-8">Participating Teams</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded shadow text-center">
-        <h3 class="text-xl font-semibold mb-2">Team Alpha</h3>
-        <p class="text-sm text-gray-600">Captain: PlayerOne</p>
+    
       </div>
       <!-- More team cards -->
     </div>
   </div>
+<div class="bg-white p-4 rounded shadow text-center">
+  <h3 class="text-xl font-semibold mb-2" id="facebookTeamCard">Loading...</h3>
+</div>
+
+<script>
+  const fbName = localStorage.getItem("facebookName");
+  if (fbName) {
+    document.getElementById("facebookTeamCard").textContent = "New Player: " + fbName;
+  } else {
+    document.getElementById("facebookTeamCard").style.display = "none";
+  }
+</script>
+
+
 </body>
 </html>
